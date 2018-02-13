@@ -1,0 +1,14 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.BlobTests.blobMetaData",
+    "bindings": [
+        {
+            "type": "blobTrigger",
+            "name": "blob",
+            "direction": "in",
+            "dataType": "binary",
+            "path": "input/{blobname}.{blobextension}",
+            "connection": "AzureWebJobsStorage"
+        }
+    ]
+}

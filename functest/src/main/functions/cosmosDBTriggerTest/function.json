@@ -1,0 +1,16 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.CosmosDBTests.cosmosDBTriggerTest",
+    "bindings": [
+        {
+            "type":"cosmosDBTrigger",
+            "direction":"in",
+            "name":"documents",
+            "leaseCollectionName":"leases",
+            "databaseName":"test",
+            "collectionName":"mycollection",
+            "createLeaseCollecionIfNotExists":true,
+            "connection":"AzureWebJobsCosmosDBConnectionString"
+        }
+    ]
+}

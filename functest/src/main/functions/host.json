@@ -1,0 +1,23 @@
+{
+  "http": {
+    "routePrefix": "api",
+    "maxConcurrentRequests": 5,
+    "maxOutstandingRequests": 30
+  },
+  "tracing": {
+    "consoleLevel": "verbose"
+  },
+  "queues": {
+    "maxPollingInterval": 20000,
+    "visibilityTimeout": "00:01:00"
+  },
+  "swagger": {
+    "enabled": true
+  },
+  "eventHub":{
+    "maxBatchSize":64,
+    "perfetchCount":256,
+    "batchCheckpointFrequency":1
+  },
+  "functionTimeout": "00:05:00"
+}

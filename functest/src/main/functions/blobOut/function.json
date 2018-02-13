@@ -1,0 +1,27 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.BlobTests.blobOut",
+    "bindings": [
+        {
+            "type": "httpTrigger",
+            "name": "req",
+            "direction": "in",
+            "authLevel": "anonymous",
+            "methods": [ "post" ]
+        },
+        {
+            "type": "blob",
+            "name": "output",
+            "direction": "out",
+            "dataType": "binary",
+            "path": "blobout/test.bin",
+            "connection": "AzureWebJobsSampleStorage"
+        },
+        {
+            "type": "http",
+            "name": "$return",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}

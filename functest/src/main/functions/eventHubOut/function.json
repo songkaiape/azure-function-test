@@ -1,0 +1,27 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.EventHubTests.eventHubOut",
+    "bindings": [
+        {
+            "type": "httpTrigger",
+            "name": "req",
+            "direction": "in",
+            "authLevel": "anonymous",
+            "methods": [ "post" ]
+        },
+        {
+            "type":"eventHub",
+            "direction":"out",
+            "name":"outputMessage",
+            "path":"barneytesthub1",
+            "connection":"AzureEventHubConnection",
+            "cardinality":"many",
+            "consumerGroup":"$Default"
+        },
+        {
+            "type": "http",
+            "name": "$return",
+            "direction": "out"
+        }
+    ]
+}

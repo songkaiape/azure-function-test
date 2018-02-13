@@ -1,0 +1,28 @@
+
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.TableTests.tableOut",
+    "bindings": [
+        {
+            "type": "httpTrigger",
+            "name": "req",
+            "direction": "in",
+            "authLevel": "anonymous",
+            "methods": [ "post" ]
+        },
+          {
+            "type": "table",
+            "name": "tableBinding",      
+            "tableName":"Person",
+            "connection": "AzureWebJobsStorage",
+            "direction": "out"
+          },
+        {
+            "type": "http",
+            "name": "$return",
+            "direction": "out"
+        }
+    ],
+    "disabled": false
+}
+

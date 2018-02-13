@@ -1,0 +1,23 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.QueueTests.queueOut",
+    "bindings": [
+        {
+            "type":"httpTrigger",
+            "direction":"in",
+            "name":"input"
+        },
+        {
+            "type":"http",
+            "direction":"out",
+            "name":"return"
+        },
+        {
+            "type": "queue",
+            "name": "$return",
+            "direction": "out",
+            "queueName":"outqueue",
+            "connection": "AzureWebJobsStorage"
+        }
+    ]
+}

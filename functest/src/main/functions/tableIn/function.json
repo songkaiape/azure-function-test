@@ -1,0 +1,25 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.TableTests.tableIn",
+    "bindings": [
+        {
+            "type": "queueTrigger",
+            "queueName": "myqueue-table",
+            "connection": "AzureWebJobsStorage",
+            "name": "myQueueItem",
+            "direction": "in"
+          },
+          {
+            "type": "table",
+            "name": "tableBinding",      
+            "tableName":"Person",
+            "partitionKey":"Test",
+            "take":50,
+            "rowKey":"{queueTrigger}",
+            "connection": "AzureWebJobsStorage",
+            "direction": "in"
+          }
+    ],
+    "disabled": false
+}
+

@@ -1,0 +1,14 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.ServiceBusTests.serviceBusTriggerTest",
+    "bindings": [
+        {
+            "type": "serviceBusTrigger",
+            "name": "mySbMsg",
+            "direction": "in",
+            "queueName":"myinputqueue",
+            "connection": "AzureServiceBus",
+            "accessRights":"Manage"
+        }
+    ]
+}

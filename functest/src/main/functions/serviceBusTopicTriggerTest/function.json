@@ -1,0 +1,15 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.ServiceBusTopicTests.serviceBusTopicTriggerTest",
+    "bindings": [
+        {
+            "type": "serviceBusTrigger",
+            "name": "mySbMsg",
+            "direction": "in",
+            "topicName":"mytopic",
+            "connection": "AzureServiceBus",
+            "subscriptionName":"mysubscription",
+            "accessRights":"Manage"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.EventHubTests.eventHubTriggerTest",
+    "bindings": [
+    {
+        "type":"eventHubTrigger",
+        "name":"myMessage",
+        "direction":"in",
+        "path":"barneytesthub1",
+        "connection":"AzureEventHubConnection",
+        "cardinality":"many",
+        "consumerGroup":"$Default"
+    }
+    ]
+}

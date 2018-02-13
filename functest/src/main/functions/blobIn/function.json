@@ -1,0 +1,29 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.BlobTests.blobIn",
+    "bindings": [
+        {
+            "type": "queueTrigger",
+            "queueName": "myqueue-items",
+            "connection": "AzureWebJobsStorage",
+            "name": "myQueueItem",
+            "direction": "in"
+          },
+          {
+            "type": "blob",
+            "name": "myInputBlob",      
+            "path": "samples-workitems/{queueTrigger}",
+            "connection": "AzureWebJobsStorage",
+            "direction": "in"
+          },
+          {
+            "type": "blob",
+            "name": "myOutputBlob",
+            "path": "samples-workitems/{queueTrigger}-Copy",
+            "connection": "AzureWebJobsStorage",
+            "direction": "out"
+          }
+    ],
+    "disabled": false
+}
+

@@ -1,0 +1,28 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.CosmosDBTests.cosmosDBOut",
+    "bindings": [
+        {
+            "type": "httpTrigger",
+            "name": "req",
+            "direction": "in",
+            "authLevel": "anonymous",
+            "methods": [ "post" ]
+        },
+        {
+            "type":"documentDB",
+            "name":"testdocuments",
+            "direction":"out",
+            "databaseName":"Tasks",
+            "collectionName":"Items",
+            "createIfNotExists":true,
+            "connection":"AzureWebJobsCosmosDBConnectionString"
+        },
+        {
+            "type": "http",
+            "name": "$return",
+            "direction": "out"
+        }
+        
+    ]
+}

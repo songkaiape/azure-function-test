@@ -1,0 +1,13 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.QueueTests.queueTriggerTest",
+    "bindings": [
+        {
+            "type": "queueTrigger",
+            "name": "myQueueItem",
+            "direction": "in",
+            "queueName":"myqueue-test",
+            "connection": "AzureWebJobsStorage"
+        }
+    ]
+}

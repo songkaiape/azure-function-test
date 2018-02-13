@@ -1,0 +1,26 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.ServiceBusTests.serviceBusOut",
+    "bindings": [
+        {
+            "type": "httpTrigger",
+            "name": "req",
+            "direction": "in",
+            "authLevel": "anonymous",
+            "methods": [ "post" ]
+        },
+        {
+            "type": "serviceBus",
+            "name": "outputSbQueue",
+            "direction": "out",
+            "queueName":"myinputqueue",
+            "connection": "AzureServiceBus",
+            "access":"MANAGE"
+        },
+        {
+            "type": "http",
+            "name": "$return",
+            "direction": "out"
+        }
+    ]
+}

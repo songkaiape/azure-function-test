@@ -1,0 +1,8 @@
+/home/barneytest/Desktop/functest/src/main/functions/bin/extensions.deps.json
+/home/barneytest/Desktop/functest/src/main/functions/bin/extensions.dll
+/home/barneytest/Desktop/functest/src/main/functions/bin/extensions.pdb
+/home/barneytest/Desktop/functest/src/main/functions/functions-extensions/obj/Debug/netstandard2.0/linux-x64/extensions.csproj.CoreCompileInputs.cache
+/home/barneytest/Desktop/functest/src/main/functions/functions-extensions/obj/Debug/netstandard2.0/linux-x64/extensions.AssemblyInfoInputs.cache
+/home/barneytest/Desktop/functest/src/main/functions/functions-extensions/obj/Debug/netstandard2.0/linux-x64/extensions.AssemblyInfo.cs
+/home/barneytest/Desktop/functest/src/main/functions/functions-extensions/obj/Debug/netstandard2.0/linux-x64/extensions.dll
+/home/barneytest/Desktop/functest/src/main/functions/functions-extensions/obj/Debug/netstandard2.0/linux-x64/extensions.pdb

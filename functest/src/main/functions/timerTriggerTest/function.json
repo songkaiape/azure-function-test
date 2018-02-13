@@ -1,0 +1,12 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.TimerTests.timerTriggerTest",
+    "bindings": [
+        {
+            "type": "timerTrigger",
+            "direction": "in",
+            "name": "myTimer",
+            "schedule": "0 */1 * * * *"
+        }
+    ]
+}

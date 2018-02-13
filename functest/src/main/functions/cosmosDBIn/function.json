@@ -1,0 +1,23 @@
+{
+    "scriptFile": "../../../../target/azure-functions-java-sample-1.0-SNAPSHOT.jar",
+    "entryPoint": "com.microsoft.serverless.CosmosDBTests.cosmosDBIn",
+    "bindings": [
+        {
+            "type": "queueTrigger",
+            "direction": "in",
+            "queueName": "myqueue-dbin",
+            "connection": "AzureWebJobsStorage",
+            "name": "myQueue"
+        },
+        {
+            "name": "inputdocument",
+            "type": "documentDB",
+            "databaseName": "outDatabase",
+            "id": "test",
+            "collectionName": "MyCollection",
+            "direction": "in",
+            "connection": "AzureWebJobsCosmosDBConnectionString"
+        }
+    ],
+    "disabled": false
+}

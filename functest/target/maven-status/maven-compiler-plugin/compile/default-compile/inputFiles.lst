@@ -1,9 +1,0 @@
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\HttpTests.java
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\ServiceBusTests.java
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\CosmosDBTests.java
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\TableTests.java
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\ServiceBusTopicTests.java
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\BlobTests.java
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\TimerTests.java
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\EventHubTests.java
-C:\azure-function-test\functest\src\main\java\com\microsoft\serverless\QueueTests.java

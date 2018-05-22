@@ -7,6 +7,7 @@ import com.microsoft.azure.serverless.functions.OutputBinding;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
+
 public class CosmosDBTests {
 
     public static void cosmosDBTriggerTest(@BindingName("documents") ArrayList<LinkedHashMap> documents,
@@ -16,6 +17,9 @@ public class CosmosDBTests {
 
     }
 
+    /**
+    * This function will be invoked when a post request with file to http://localhost:7071/api/CosmosDBOutJava. A new document will add to the output documentdb
+    */
     public static String cosmosDBOut(byte[] data, @BindingName("testdocuments") OutputBinding<String> documents,
             ExecutionContext context) {
         context.getLogger().info("Http process message" + new String(data));
@@ -23,12 +27,15 @@ public class CosmosDBTests {
 
         String doc = new String(data);
         outdata.put("id", doc);
-      //documents.setValue(outdata.toString());
-        documents.setValue("{\"id\":\"testEEEE\"}");
+        documents.setValue(outdata.toString());
+        //documents.setValue("{\"id\":\"test\"}");
         return doc;
 
     }
 
+    /**
+    * This function will be invoked when a message add to the queue.The documentDB use as input to get the item with the name of the message
+    */
     public static void cosmosDBIn(@BindingName("inputdocument") String documents,
             @BindingName("myQueue") String myQueueItem, ExecutionContext context) {
         context.getLogger().info(myQueueItem);

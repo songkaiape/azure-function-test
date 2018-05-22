@@ -4,8 +4,14 @@ import com.microsoft.azure.serverless.functions.ExecutionContext;
 import com.microsoft.azure.serverless.functions.annotation.BindingName;
 import com.microsoft.azure.serverless.functions.OutputBinding;
 
+/**
+ * Azure Functions with Azure Storage table.
+ */
 public class TableTests {
 
+    /**
+     * This function will be invoked when a new http request is received at the specified path. 
+     */
     public static String tableOut(byte[] data, @BindingName("tableBinding") OutputBinding<Person> output,
             ExecutionContext context) {
         String data_s = new String(data);
@@ -14,6 +20,9 @@ public class TableTests {
         return data.length + " bytes";
     }
 
+    /**
+     * This function will be invoked when a new queue message is received. 
+     */
     public static void tableIn(@BindingName("tableBinding")String personEntity,@BindingName("myQueueItem") String myQueueItem, ExecutionContext context ) {
 
         context.getLogger().info("Java Queue trigger function processed:" + myQueueItem);

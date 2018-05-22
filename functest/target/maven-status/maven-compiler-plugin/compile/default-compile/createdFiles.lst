@@ -1,0 +1,10 @@
+com\microsoft\serverless\TableTests.class
+com\microsoft\serverless\EventHubTests.class
+com\microsoft\serverless\ServiceBusTopicTests.class
+com\microsoft\serverless\HttpTests.class
+com\microsoft\serverless\TimerTests.class
+com\microsoft\serverless\TableTests$Person.class
+com\microsoft\serverless\BlobTests.class
+com\microsoft\serverless\QueueTests.class
+com\microsoft\serverless\ServiceBusTests.class
+com\microsoft\serverless\CosmosDBTests.class
